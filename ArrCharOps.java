@@ -109,7 +109,7 @@ public class ArrCharOps {
         if (arr.length == 0) return subArr;
 
         int subIndex = 0;
-        for (int i = beginIndex; i <= beginIndex; i++) {
+        for (int i = beginIndex; i < endIndex; i++) {
             subArr[subIndex++] = arr[i];
         }
         return subArr;

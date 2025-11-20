@@ -1,10 +1,11 @@
 public class Primes {
     public static void main(String[] args) {
+
         int num = Integer.parseInt(args[0]);
 
         boolean[] numbers = new boolean[num + 1];
 
-        String primeOut = "";
+        String primeOut = String.format("Prime numbers up to %s:", num);
         int primes = 2;
         int nonPrimes = 0;
         int primeCount = 0;
