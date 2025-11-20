@@ -22,5 +22,21 @@ public class KeywordsDetector {
     // If a sentence contains one or more of the kewords, prints it.
     public static void detectAndPrint(String[] sentences, String[] keywords) {
         // Replace this comment with your code
+        for(String se : sentences) {
+            String word = "";
+            boolean isBullshit = false;
+            for (int i = 0; i < se.length(); i++) {
+                if (isBullshit) {System.out.println(se); break;}
+                if (!Character.isLetter(se.charAt(i))) {
+                    for (String keyword : keywords ) {
+                        //System.out.println(keyword + ":" + word + "==" + keyword.compareTo(word));
+                        if (keyword.toLowerCase().compareTo(word.toLowerCase()) == 0) {isBullshit = true; break;};
+                    }
+                    word = "";
+                    continue;
+                }
+                word += se.charAt(i);              
+            }            
+        }
     }
 }
