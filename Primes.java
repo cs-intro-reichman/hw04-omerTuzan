@@ -5,7 +5,7 @@ public class Primes {
 
         boolean[] numbers = new boolean[num + 1];
 
-        String primeOut = String.format("Prime numbers up to %s:", num);
+        String primeOut = String.format("Prime numbers up to %s%n:", num);
         int primes = 2;
         int nonPrimes = 0;
         int primeCount = 0;
